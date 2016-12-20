@@ -1,4 +1,3 @@
-# AngularExample
+# Gime5 Frontend
 
-This project is a template to show how to configure an angular 2 project with angular-cli and angular2-materialize. 
-Please have a look at the commits.
+This project is configured to be an angular 2 project with angular-cli and angular2-materialize. 
