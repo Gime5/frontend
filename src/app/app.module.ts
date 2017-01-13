@@ -7,13 +7,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CausesComponent } from './causes/cause-list/causes.component';
 import { CauseDetailComponent } from './causes/cause/cause-detail.component';
+import { ActionsComponent } from './actions/action-list.component';
 import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   declarations: [
     AppComponent,
     CausesComponent,
-    CauseDetailComponent
+    CauseDetailComponent,
+    ActionsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+            <!-- Dropdown Trigger -->
+            <div class="center">
+
+                <a class='dropdown-button green-text' href='#' data-activates='type-causes'>Acciones cerca de ti <i class="material-icons">arrow_drop_down</i></a>
+
+                <!-- Dropdown Structure -->
+                <ul id='type-causes' class='dropdown-content'>
+                    <li><a href="#!">Acciones</a></li>
+                    <li><a href="#!">Acciones Abiertas</a></li>
+                    <li><a href="#!">Acciones cerca de ti</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Empresas Solidarias</a></li>
+                    <li><a href="#!">Causas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="actions && actions.length">
+        <h1>{{pageTitle}}</h1>
+        <div *ngFor="let action of actions" class="col s12">
+            <div class="card">
+                <div class="card-content valign-wrapper">
+                    <div class="col s2 m1">
+                        <img src="assets/{{action.segment}}.png" />
+                    </div>
+                    <p class="valign col s6 m8">
+                        {{action.name}}
+                    </p>
+                    <div class="col s2 m2 center">Fecha {{action.date}}</div>
+                    <div class="col s2 m1">
+                        <button class="btn-floating btn-small waves-effect waves-light" routerLink="/cause">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+    </div>
+
+</div>
