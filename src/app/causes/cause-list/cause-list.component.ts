@@ -9,12 +9,15 @@ import { CauseService } from '../shared/cause.service';
 })
 export class CauseListComponent implements OnInit {
   causes: ICause[];
+  errorMessage: string;
 
-  constructor(private _causeService: CauseService){
+  constructor(private _causeService: CauseService) {
 
-    }
+  }
 
   ngOnInit(): void {
-    this.causes = this._causeService.getCauses();
+    this._causeService.getCauses()
+                      .subscribe(causes => this.causes = causes,
+                      error => this.errorMessage = <any>error);
   }
 }
