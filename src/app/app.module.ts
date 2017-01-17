@@ -5,17 +5,17 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CausesComponent } from './causes/cause-list/causes.component';
-import { CauseDetailComponent } from './causes/cause/cause-detail.component';
-import { ActionsComponent } from './actions/action-list.component';
+import { CauseListComponent } from './causes/cause-list/cause-list.component';
+import { CauseComponent } from './causes/cause/cause.component';
+import { ActionListComponent } from './actions/action-list.component';
 import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CausesComponent,
-    CauseDetailComponent,
-    ActionsComponent
+    CauseListComponent,
+    CauseComponent,
+    ActionListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +30,15 @@ import { MaterializeModule } from 'angular2-materialize';
       },
       {
         path: 'causes',
-        component: CausesComponent
+        component: CauseListComponent
       },
       {
         path: 'cause',
-        component: CauseDetailComponent
+        component: CauseComponent
+      },
+      {
+        path: 'actions',
+        component: ActionListComponent
       }
     ])
   ],
