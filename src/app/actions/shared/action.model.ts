@@ -5,8 +5,8 @@ export interface IAction{
     description: string;
     causeId: number;
     facebookLink: string;
-    date: string;
-    startHour: string;
+    startDate: string;
+    endDate: string;
     endHour: string;
     map: string;
 }

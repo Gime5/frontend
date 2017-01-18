@@ -6,9 +6,8 @@
         "description": "Recudamos para maquillaje",
         "causeId": 1,
         "facebookLink": "#",
-        "date": "12/01/2017",
-        "startHour": "14:00",
-        "endHour": "16:00",
+        "startDate": "12/01/2017 14:00",
+        "endDate": "12/01/2017 16:00",
         "map": "#"
     },
     {
@@ -18,9 +17,8 @@
         "description": "Recudamos para maquillaje",
         "causeId": 2,
         "facebookLink": "#",
-        "date": "12/01/2017",
-        "startHour": "14:00",
-        "endHour": "16:00",
+        "startDate": "12/01/2017 14:00",
+        "endDate": "12/01/2017 16:00",
         "map": "#"
     },
     {
@@ -30,9 +28,8 @@
         "description": "Recudamos para maquillaje",
         "causeId": 2,
         "facebookLink": "#",
-        "date": "12/01/2017",
-        "startHour": "14:00",
-        "endHour": "16:00",
+        "startDate": "12/01/2017 14:00",
+        "endDate": "12/01/2017 16:00",
         "map": "#"
     },
     {
@@ -42,9 +39,8 @@
         "description": "Recudamos para maquillaje",
         "causeId": 2,
         "facebookLink": "#",
-        "date": "12/01/2017",
-        "startHour": "14:00",
-        "endHour": "16:00",
+        "startDate": "12/01/2017 14:00",
+        "endDate": "12/01/2017 16:00",
         "map": "#"
     }
 ]

@@ -31,7 +31,7 @@
                     <p class="valign col s6 m8">
                         {{action.name}}
                     </p>
-                    <div class="col s2 m2 center">Fecha {{action.date}}</div>
+                    <div class="col s2 m2 center">Fecha {{action.startDate | date:'dd/MM/y HH:mm'}}</div>
                     <div class="col s2 m1">
                         <button class="btn-floating btn-small waves-effect waves-light" routerLink="/cause">
                             <i class="material-icons">add</i>
