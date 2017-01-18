@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IAction } from './shared/action.model';
-import { ActionService } from './shared/action.service';
+import { IAction } from '../shared/action.model';
+import { ActionService } from '../shared/action.service';
 
 @Component({
     selector: 'g5-actions',

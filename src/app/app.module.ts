@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CauseListComponent } from './causes/cause-list/cause-list.component';
 import { CauseComponent } from './causes/cause/cause.component';
-import { ActionListComponent } from './actions/action-list.component';
+import { ActionListComponent } from './actions/action-list/action-list.component';
 import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
