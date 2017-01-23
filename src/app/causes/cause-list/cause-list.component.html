@@ -29,11 +29,11 @@
                         <img src="assets/{{cause.segment}}.png" />
                     </div>
                     <p class="valign col s6 m8">
-                        {{cause.name}}
+                        <a [routerLink]="['/cause', cause.id]">{{cause.name}}</a>
                     </p>
                     <div class="col s2 m2 center">Falta <span class="red-text">{{cause.remaining | currency:'EUR':true}}</span></div>
                     <div class="col s2 m1">
-                        <button class="btn-floating btn-small waves-effect waves-light" routerLink="/cause">
+                        <button class="btn-floating btn-small waves-effect waves-light" [routerLink]="['/cause', cause.id]">
                             <i class="material-icons">card_giftcard</i>
                         </button>
                     </div>

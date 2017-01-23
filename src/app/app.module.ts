@@ -25,7 +25,7 @@ import { MaterializeModule } from 'angular2-materialize';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/causes',
+        redirectTo: 'causes',
         pathMatch: 'full'
       },
       {
@@ -33,7 +33,7 @@ import { MaterializeModule } from 'angular2-materialize';
         component: CauseListComponent
       },
       {
-        path: 'cause',
+        path: 'cause/:id',
         component: CauseComponent
       },
       {

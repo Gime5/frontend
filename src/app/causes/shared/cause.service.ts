@@ -20,6 +20,11 @@ export class CauseService {
                   .catch(this.handleError);
       }
 
+      getCause(id: number): Observable<ICause> {
+            return this.getCauses()
+                  .map((causes: ICause[]) => causes.find(cause => cause.id == id));
+      }
+
       private handleError(error: Response) {
             console.error(error);
             return Observable.throw(error.json().error || 'Server error');

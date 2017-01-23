@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ICause } from '../shared/cause.model';
 import { CauseService } from '../shared/cause.service';
-
 
 @Component({
   selector: 'g5-cause-list',
