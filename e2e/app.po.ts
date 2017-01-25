@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class AngularExamplePage {
+export class Gime5FrontendPage {
   navigateTo() {
     return browser.get('/');
   }

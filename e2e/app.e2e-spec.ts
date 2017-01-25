@@ -1,10 +1,10 @@
-import { AngularExamplePage } from './app.po';
+import { Gime5FrontendPage } from './app.po';
 
-describe('angular-example App', function() {
-  let page: AngularExamplePage;
+describe('gime5-frontend App', function() {
+  let page: Gime5FrontendPage;
 
   beforeEach(() => {
-    page = new AngularExamplePage();
+    page = new Gime5FrontendPage();
   });
 
   it('should display message saying app works', () => {
