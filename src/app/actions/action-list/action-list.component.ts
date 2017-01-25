@@ -4,7 +4,8 @@ import { ActionService } from '../shared/action.service';
 
 @Component({
     selector: 'g5-actions',
-    templateUrl: './action-list.component.html'
+    moduleId: module.id,
+    templateUrl: 'action-list.component.html'
 })
 export class ActionListComponent implements OnInit {
     pageTitle: string = 'Acciones';

@@ -5,7 +5,8 @@ import { CauseService } from '../shared/cause.service';
 
 @Component({
   selector: 'g5-cause-list',
-  templateUrl: './cause-list.component.html'
+  moduleId: module.id,
+  templateUrl: 'cause-list.component.html'
 })
 export class CauseListComponent implements OnInit {
   causes: ICause[];

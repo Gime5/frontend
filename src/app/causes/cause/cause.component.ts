@@ -7,7 +7,8 @@ import { CauseService } from '../shared/cause.service';
 
 @Component({
   selector: 'g5-cause',
-  templateUrl: './cause.component.html'
+  moduleId: module.id,
+  templateUrl: 'cause.component.html'
 })
 export class CauseComponent implements OnInit, OnDestroy {
   pageTitle: string = 'Cause Detail';
