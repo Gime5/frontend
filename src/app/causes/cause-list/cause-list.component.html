@@ -5,28 +5,36 @@
             <!-- Dropdown Trigger -->
             <div class="center">
 
-                <a class='dropdown-button green-text' href='#' data-activates='type-causes'>Causas cerca de ti <i class="material-icons">arrow_drop_down</i></a>
+               <!-- <a class='dropdown-button green-text' href='#' data-activates='type-causes'>Causas cerca de ti <i class="material-icons">arrow_drop_down</i></a>-->
 
                 <!-- Dropdown Structure -->
-                <ul id='type-causes' class='dropdown-content'>
+                <!--<ul id='type-causes' class='dropdown-content'>
                     <li><a href="#!">Causas</a></li>
                     <li><a href="#!">Causas Abiertas</a></li>
                     <li><a href="#!">Causas cerca de ti</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Empresas Solidarias</a></li>
                     <li><a href="#!">Acciones</a></li>
-                </ul>
+                </ul>-->
+                <div class="input-field col s12">
+                    <select materialize="material_select" [(ngModel)]='listFilter'>
+                        <option value=-1>Todas las causas abiertas</option>
+                        <option value=0>Causas solidarias</option>
+                        <option value=1>Causas privadas</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row">
 
-        <div *ngFor="let cause of causes" class="col s12">
+        <div *ngFor="let cause of (causes | causeFilter:listFilter)" class="col s12">
             <div class="card">
                 <div class="card-content valign-wrapper">
                     <div class="col s2 m1">
                         <img src="assets/{{cause.segment}}.png" />
+                        {{ cause.isPrivate }}
                     </div>
                     <p class="valign col s6 m8">
                         <a [routerLink]="['/cause', cause.id]">{{cause.name}}</a>

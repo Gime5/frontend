@@ -4,18 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { MaterializeModule } from 'angular2-materialize';
+
 import { AppComponent } from './app.component';
 import { CauseListComponent } from './causes/cause-list/cause-list.component';
 import { CauseComponent } from './causes/cause/cause.component';
+import { CauseFilterPipe } from './causes/cause-list/cause-filter.pipe';
 import { ActionListComponent } from './actions/action-list/action-list.component';
-import { MaterializeModule } from 'angular2-materialize';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CauseListComponent,
     CauseComponent,
-    ActionListComponent
+    ActionListComponent,
+    CauseFilterPipe
   ],
   imports: [
     BrowserModule,

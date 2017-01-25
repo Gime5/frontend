@@ -10,7 +10,8 @@ import { CauseService } from '../shared/cause.service';
 export class CauseListComponent implements OnInit {
   causes: ICause[];
   errorMessage: string;
-
+  listFilter: boolean;
+  
   constructor(private _causeService: CauseService) {
 
   }
