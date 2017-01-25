@@ -19,8 +19,8 @@
                 <div class="input-field col s12">
                     <select materialize="material_select" [(ngModel)]='listFilter'>
                         <option value=-1>Todas las causas abiertas</option>
-                        <option value=0>Causas solidarias</option>
-                        <option value=1>Causas privadas</option>
+                        <option value=1>Causas solidarias</option>
+                        <option value=0>Causas privadas</option>
                     </select>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="card-content valign-wrapper">
                     <div class="col s2 m1">
                         <img src="assets/{{cause.segment}}.png" />
-                        {{ cause.isPrivate }}
+                        <g5-charity *ngIf='cause.isPrivate == false' ></g5-charity>
                     </div>
                     <p class="valign col s6 m8">
                         <a [routerLink]="['/cause', cause.id]">{{cause.name}}</a>

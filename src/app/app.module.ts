@@ -12,6 +12,7 @@ import { CauseComponent } from './causes/cause/cause.component';
 import { CauseFilterPipe } from './causes/cause-list/cause-filter.pipe';
 import { ActionListComponent } from './actions/action-list/action-list.component';
 
+import { g5CharityComponent } from './shared/g5charity.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ActionListComponent } from './actions/action-list/action-list.component
     CauseListComponent,
     CauseComponent,
     ActionListComponent,
-    CauseFilterPipe
+    CauseFilterPipe,
+    g5CharityComponent
   ],
   imports: [
     BrowserModule,
