@@ -14,6 +14,10 @@ import { CauseComponent } from './causes/cause/cause.component';
 import { CauseFilterPipe } from './causes/cause-list/cause-filter.pipe';
 import { ActionListComponent } from './actions/action-list/action-list.component';
 
+import { UserRegistrationComponent } from './users/registration/user-registration.component';
+
+import { EqualValidator } from './shared/equal-validator.directive'; 
+
 import { g5CharityComponent } from './shared/g5charity.component';
 
 @NgModule({
@@ -27,6 +31,10 @@ import { g5CharityComponent } from './shared/g5charity.component';
     CauseFilterPipe,
 
     ActionListComponent,
+
+    UserRegistrationComponent,
+
+    EqualValidator,
     g5CharityComponent
   ],
   imports: [

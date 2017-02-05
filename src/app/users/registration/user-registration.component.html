@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h1>{{pageTitle}}</h1>
+            <h2>{{pageSubtitle}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <form materialize (ngSubmit)="doRegister()" #registrationForm="ngForm">
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="email" type="email" class="validate" name="email" [(ngModel)]="user.email" #email="ngModel" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <input id="email-repeat" type="email" class="validate" name="emailConfirm" #confirmEmail [ngModel]="userConfirmation.confirmEmail"
+                        required validateEqual="email">
+                    <label for="email-repeat">Repite el Email</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="name" type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="validate" required minlength="2">
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <input id="last_name" type="text" class="validate" name="last_name" #last_name="ngModel" [(ngModel)]="user.last_name" required>
+                    <label for="last_name">Apellidos</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="zip_code" type="text" name="zip_code" #name="ngModel" [(ngModel)]="user.zip_code" class="validate" required>
+                    <label for="name">Código Postal</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <input id="province" type="text" class="validate" name="province" #last_name="ngModel" [(ngModel)]="user.province" required>
+                    <label for="province">Provincia</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="user_name" type="text" class="validate" name="user_name" #user_name="ngModel" [(ngModel)]="user.user_name" required>
+                    <label for="user_name">Nombre de usuario</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="password" type="password" class="validate" name="password" #password="ngModel" [(ngModel)]="user.password" required
+                        minlength="6">
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="input-field col m6 s12">
+                    <input id="password-repeat" type="password" class="validate" name="confirmPassword" [ngModel]="userConfirmation.confirmPassword"
+                        #confirmPassword required minlength="6" validateEqual="password">
+                    <label for="password-repeat">Repite el password</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 right-align">
+                    <input type="checkbox" id="conditions" />
+                    <label for="conditions">Acepto las <a href="/condiciones">condiciones</a></label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m6 s12 offset-m6 right-align">
+                    <input type="submit" value="Regístrate" class="validate waves-effect waves-light btn" required/>
+                </div>
+            </div>
+
+            <div class="alert alert-success" *ngIf="status == 'success'">
+                Te has registrado correctamente, ya puedes identificarte
+            </div>
+
+            <div class="alert alert-warning" *ngIf="status == 'error'">
+                Ha ocurrido un error en el registro, revisa la información
+            </div>
+
+        </form>
+    </div>
+</div>
