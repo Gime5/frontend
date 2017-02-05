@@ -4,30 +4,72 @@
       <div class="nav-wrapper">
         <ul class="left">
           <li>
-            <a href="#!" materialize="sideNav" data-activates="slide-out" [materializeParams]="[{closeOnClick: true}]" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+            <a [routerLink]="['/']" materialize="sideNav" data-activates="slide-out" [materializeParams]="[{closeOnClick: true}]" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
           </li>
-          <li><a href="#!"><img src="assets/logo.png" title="Gime5" style="padding-top: 13px" /></a></li>
+          <li>
+            <a [routerLink]="['/']"><img src="assets/logo.png" title="Gime5" class="logo"></a>
+          </li>
+        </ul>
+
+        <ul class="hide-on-small-only">
+          <li><a [routerLink]="['/register']">Regístrate</a></li>
           <li><a [routerLink]="['/causes']">Todas las causas</a></li>
-          <li><a [routerLink]="['/cause/1']">Una causa</a></li>
           <li><a [routerLink]="['/actions']">Todas las acciones</a></li>
         </ul>
 
-<ul class="right">
-  <li><a href="#!"><i class="material-icons">search</i></a></li>
-</ul>
-</div>
-</nav>
-</div>
+        <ul class="right">
+          <li><a href="#!"><i class="material-icons">search</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
-<main class="grey lighten-3">
+
+<main>
   <ul id="slide-out" class="side-nav">
+    <li><a [routerLink]="['/register']">Regístrate</a></li>
     <li><a [routerLink]="['/causes']">Todas las causas</a></li>
-    <li><a [routerLink]="['/cause/1']">Una causa</a></li>
     <li><a [routerLink]="['/actions']">Todas las acciones</a></li>
   </ul>
 
   <router-outlet></router-outlet>
 
 </main>
-<footer class="page-footer white-text">
+
+<footer class="page-footer green">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Gime5</h5>
+        <p class="grey-text text-lighten-4">
+          Lorem ipsum dolor
+        </p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Colabora</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Ayuda</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Idea de <a class="grey-text text-lighten-1" href="http://www.maketup.com">make't up</a>
+    </div>
+  </div>
 </footer>

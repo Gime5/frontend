@@ -1,3 +1,15 @@
 .navbar-fixed.z-top {
     z-index: 1000;
 }
+
+.side-nav {
+    padding-top: 70px;
+}
+
+.logo {
+    padding-top: 0.7em;
+}
+
+footer.page-footer {
+  margin: 0;
+}

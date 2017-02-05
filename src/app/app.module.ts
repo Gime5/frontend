@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
 import { CauseListComponent } from './causes/cause-list/cause-list.component';
 import { CauseComponent } from './causes/cause/cause.component';
 import { CauseFilterPipe } from './causes/cause-list/cause-filter.pipe';
@@ -17,10 +19,14 @@ import { g5CharityComponent } from './shared/g5charity.component';
 @NgModule({
   declarations: [
     AppComponent,
+    
+    HomepageComponent,
+
     CauseListComponent,
     CauseComponent,
-    ActionListComponent,
     CauseFilterPipe,
+
+    ActionListComponent,
     g5CharityComponent
   ],
   imports: [
@@ -31,8 +37,11 @@ import { g5CharityComponent } from './shared/g5charity.component';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: 'causes',
-        pathMatch: 'full'
+        component: HomepageComponent
+      },
+      {
+        path: 'home',
+        component: HomepageComponent
       },
       {
         path: 'causes',
@@ -45,6 +54,10 @@ import { g5CharityComponent } from './shared/g5charity.component';
       {
         path: 'actions',
         component: ActionListComponent
+      },
+      {
+        path: 'register',
+        component: UserRegistrationComponent
       }
     ])
   ],
