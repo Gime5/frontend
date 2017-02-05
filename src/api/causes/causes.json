@@ -2,10 +2,12 @@
     {
         "id": 1,
         "name": "Cunas para niños sin recursos Llucmajorrrrr",
+        "content": "Hay muchas familias que no pueden pagar sus necesidades básicas. La fundación INDIG los ayuda. En este caso recaudamos para comprar cunas. <br/>Tu ayuda cuenta: dona lo que queres y puedes. 100% de tu donación irá a esta causa.",
         "remaining": -130,
         "total": 500,
         "segment": "children",
-        "isPrivate": false
+        "isPrivate": false,
+        "rel_province": 70
     },
     {
         "id": 14,
@@ -13,7 +15,8 @@
         "remaining": -110,
         "total": 650,
         "segment": "adults",
-        "isPrivate": true
+        "isPrivate": true,
+        "rel_province": 70
     },
     {
         "id": 15,
@@ -21,7 +24,8 @@
         "remaining": -65,
         "total": 650,
         "segment": "seniors",
-        "isPrivate": false
+        "isPrivate": false,
+        "rel_province": 60
     },
     {
         "id": 13,

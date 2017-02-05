@@ -1,6 +1,6 @@
 <div class="container" *ngIf='cause'>
   <div class="row">
-    <div clas="col s12">
+    <div class="col s12">
       <h1>{{pageTitle}}</h1>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col s12">
       <div class="card green">
-        <p class="center white-text">Palma de Mallorca</p>
+        <p class="center white-text">{{cause.rel_province}}</p>
       </div>
     </div>
   </div>
@@ -34,11 +34,7 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content valign-wrapper">
-          <p class="valign center col s12">
-            Hay muchas familias que no pueden pagar sus necesidades básicas. La fundación INDIG los ayuda. En este caso recaudamos para
-            comprar cunas. <br/>Tu ayuda cuenta: dona lo que queres y puedes. 100% de tu donación irá a esta
-            causa.
-          </p>
+          <p class="valign center col s12" [innerHTML]="cause.content"></p>
         </div>
       </div>
     </div>
@@ -52,7 +48,7 @@
       <a class="btn-floating btn-large waves-effect waves-light bluegrey">+info</a>
     </div>
     <div class="col s3 center">
-      Falta <span class="red-text">0€</span>(de 500€)
+      Falta <span class="red-text">{{cause.remaining | currency:'EUR':true}}</span>(de {{cause.total | currency:'EUR':true}})
     </div>
     <div class="col s3 center">
       <a class="btn-floating btn-large waves-effect waves-light black">Logo</a>
@@ -63,8 +59,8 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content valign-wrapper">
-          <p class="valign center">
-            Gracias a todos vosotros el 15/9/16 compramos 6 cunas en CUNAS PAQUI.
+          <p class="valign center" [innerHTML]="cause.content">
+            
           </p>
         </div>
       </div>
